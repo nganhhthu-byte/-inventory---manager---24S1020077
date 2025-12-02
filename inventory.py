@@ -48,3 +48,12 @@ def add_product():
     products.append(product)
     print("Đã nhập hàng thành công.")
     
+def view_inventory():
+    if not products:
+        print(">>> Kho hàng đang trống!")
+        return
+    
+    print("\n--- DANH SÁCH TỒN KHO ---")
+    for p in products:
+        print(f"{p['name']} - Giá: {p['price']} - SL: {p['qty']}")
+
